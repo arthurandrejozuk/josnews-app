@@ -1,0 +1,9 @@
+{
+    "name": "@art/components",
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": "Arthur-Avila",
+    "dependencies": {
+        "styled-components": "^6.1.1"
+    }
+}
