@@ -2,13 +2,17 @@ import { SiCodereview } from "react-icons/si";
 import { CiSearch } from "react-icons/ci";
 import { IoHomeOutline } from "react-icons/io5";
 import { IoNewspaperOutline } from "react-icons/io5";
-import { FaRegCompass } from "react-icons/fa";
+import { CiVideoOn } from "react-icons/ci";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { Text } from "@art/components/Text"
 import Pesquisa from "../pesquisa/Pesquisa";
 import { useState } from "react";
+import styled from "styled-components";
 
+// const HomeStyled = styled.div`
+//     width:
 
+// `
 
 
 export default function HomeMenu({onClick}){
@@ -22,11 +26,11 @@ export default function HomeMenu({onClick}){
     return(
         <>
             <Pesquisa ativado={ativa}/>
-            <li><IoHomeOutline size={24} color={"#B6BBC4"} /><Text href="/">Home</Text></li>
-            <li  onClick={()=> {ativaPesquisa()}}><CiSearch size={24} color={"#B6BBC4"}/><Text>Pesquisa</Text></li>
-            <li onClick={onClick}><SiCodereview size={24} color={"#B6BBC4"}/><Text>Reviews</Text>< MdOutlineKeyboardArrowRight className="arrow" size={24} color={"#B6BBC4"}/></li>
-            <li><IoNewspaperOutline size={24} color={"#B6BBC4"}/> <Text>News</Text></li>
-            <li><FaRegCompass size={24} color={"#B6BBC4"}/><Text>Guides</Text></li>
+            <Text href="/"><li><IoHomeOutline size={32} color={"#B6BBC4"} />Home</li></Text>
+            <li  onClick={()=> {ativaPesquisa()}}><CiSearch size={32} color={"#B6BBC4"}/><Text>Pesquisa</Text></li>
+            <Text><li onClick={onClick}><SiCodereview size={32} color={"#B6BBC4"}/>Reviews< MdOutlineKeyboardArrowRight className="arrow" size={32} color={"#B6BBC4"}/></li></Text>
+            <Text href="/news"><li><IoNewspaperOutline size={32} color={"#B6BBC4"}/>News</li></Text>
+            <li><CiVideoOn  size={32} color={"#B6BBC4"}/><Text>Videos</Text></li>
         </>
     )
 }

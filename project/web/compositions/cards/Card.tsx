@@ -75,10 +75,9 @@ export default function Card({titulo, categoria, capa, link, tags, subtitulo}){
                     </picture>
                     <div className="descricao">
                         <h1>{titulo}</h1>
-                        <p className="date">Publicado {tags}</p>
+                        <p className="date">Publicado {tags.split("T", 1)}</p>
                         <p>{subtitulo}</p>
                         <p>{categoria}</p>
-                        
                     </div>
             </CardStyled >
         </LinkStyled >

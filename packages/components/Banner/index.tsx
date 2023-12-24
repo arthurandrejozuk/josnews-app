@@ -12,6 +12,7 @@ const BannerContainer = styled.div`
     margin-bottom: 12px;
     margin-left: 200px;
     gap: 12px;
+    
     img:hover{
         transition: 250ms;
         filter: blur(0px)

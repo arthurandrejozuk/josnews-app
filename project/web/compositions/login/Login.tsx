@@ -6,7 +6,6 @@ const LoginStyles = styled.div`
     bottom: 32px;
     display: flex;
     align-items: center;
-    width: auto;
     padding-top: 16px;
     padding-bottom: 16px;
     border-top: 2px solid black;
@@ -23,11 +22,13 @@ const LoginStyles = styled.div`
     .cadastro:hover {
         opacity: 0.8;
     }
+    @media(max-width: 400px){
+       width: 500px;
+    }
+   
 `
 const ButtonLogin = styled(Button)`
-  
-   
-  
+
 `
 
 export default function Login(){

@@ -8,18 +8,21 @@ export default function useFetch<T>({url}:{url:string}){
 
     useEffect(() => {
         setLoading(true)
-        fetch(`http://localhost:4000/${url}`)
-        // Tranforma a resposta em JSON
-        .then(resposta => resposta.json())
-        // Envia dados tranformado em json para dados(nossa const)
-            .then(dados => setDados(dados))
-        // caso tenha um erro ao capturar a api
-            .catch((erro) => {
-                setError(erro.message); // You might want to use erro.message to get a more descriptive error message
-            })
-            .finally(()=>{
-                setLoading(false)
-            });
+        const fetchData = async () => {
+            try {
+              const response = await fetch('http://localhost:8080/noticias');
+              const data = await response.json()
+              setDados(data);
+              console.log('API Response:', data);
+            } catch (error) {
+              setError(error)
+              console.error('Error fetching data:', error);
+            } finally {
+            setLoading(false); // Stop loading indicator (whether successful or not)
+          }
+          };
+          
+          fetchData();
         // Recebe a variavel para verificar caso a mude, se mudar, recarrega o useEffect
     }, [url]);
 

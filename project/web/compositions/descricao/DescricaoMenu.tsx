@@ -30,6 +30,7 @@ const DescStyled = styled.div`
     scroll-behavior: smooth;
     overflow-y: hidden;
     height: 50%;
+    width: 100%;
     
     ul{
         display: flex;
@@ -40,7 +41,7 @@ const DescStyled = styled.div`
         cursor: pointer;
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: 12px;
         padding: 8px;
         padding-right: 12px;
         width: 100%;
@@ -48,11 +49,12 @@ const DescStyled = styled.div`
         animation: ${fadeInOut} 0.5s ease;
         border-radius: 8px;
         text-align: center;
-       
+       @media(max-width: 400px){
+        font-size: 32px;
+       }
     }
     .arrow{
-            margin-left: 40%;
-            justify-self: flex-end;
+           margin-left: 60px;
     }
     li:hover{
         background-color: #3b3b3b;

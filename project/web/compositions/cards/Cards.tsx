@@ -2,8 +2,8 @@ import styled from "styled-components";
 import Card from "./Card";
 import useNoticias from "../../useFunction/useDadosNoticias";
 import OpcoesNews from "../categoria/OpcoesNews";
-import { useState } from "react";
-import INoticias from "../../types/INoticias";
+import { useEffect, useState } from "react";
+import INoticias, { EnumCategoria } from "../../types/INoticias";
 
 const CardsStyled = styled.div`
     
@@ -42,32 +42,32 @@ export default function Cards(){
 
     const opcoes:{ categoria: string; key: number; selecionado: boolean }[] = [
         {
-            categoria: "Ultimas",
+            categoria: EnumCategoria.ULTIMAS,
             key: 1,
             selecionado: false
         },
         {
-            categoria: "Destaques",
+            categoria: EnumCategoria.DESTAQUES,
             key: 2,
             selecionado: false
         },
         {
-            categoria: "Xbox",
+            categoria: EnumCategoria.XBOX,
             key: 3,
             selecionado: false
         },
         {
-            categoria: "Playstation",
+            categoria: EnumCategoria.PLAYSTATION,
             key: 4,
             selecionado: false
         },
         {
-            categoria: "Nintendo",
+            categoria: EnumCategoria.NINTENDO,
             key: 5,
             selecionado: false
         },
         {
-            categoria: "Filmes",
+            categoria: EnumCategoria.FILMES,
             key: 6,
             selecionado: false
         }
@@ -76,7 +76,7 @@ export default function Cards(){
     
     const {dados: news} = useNoticias();
 
-    const  [filteredNews, setFilteredNews] = useState<INoticias[]>();
+    const  [filteredNews, setFilteredNews] = useState<INoticias[]| undefined>();
     function comparaCategoria(selectedCategory: { categoria: string }) {
         const selectedCategoryInfo = opcoes.find(
           (opcao) => opcao.categoria === selectedCategory.categoria
@@ -88,7 +88,7 @@ export default function Cards(){
           } else {
             // Filter news based on the selected category
             const filtrado =  news.filter(
-              (noticia) => noticia.categoria === selectedCategoryInfo.categoria
+              (noticia) => noticia.categoria.toLowerCase() === selectedCategoryInfo.categoria.toLowerCase()
             );
             setFilteredNews(filtrado)
           }
@@ -97,17 +97,23 @@ export default function Cards(){
         (filteredNews || news) && (filteredNews || news).map(noticia => {
       console.log(noticia)
     })
+    useEffect(() => {
+      // Log news whenever either filteredNews or news changes
+      (filteredNews || news)?.forEach((noticia) => {
+        console.log(noticia);
+      });
+    }, [filteredNews, news]);
 
     return(
     < DestaquesStyled>
-        <OpcoesNews onClick={(categoria) => comparaCategoria({categoria})} opcoes={opcoes} />
+        <OpcoesNews onClick={(categoria: EnumCategoria) => comparaCategoria({categoria})} opcoes={opcoes} />
             <CardsStyled>  
         {(filteredNews || news) &&
             (filteredNews || news).map((noticia) => (
           <Card
             key={noticia.id}
             titulo={noticia.titulo}
-            tags={noticia.data_publicacao}
+            tags={noticia.dataDePublicacao}
             categoria={noticia.categoria}
             capa={noticia.imagem_capa}
             link={noticia.link}

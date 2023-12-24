@@ -1,14 +1,24 @@
-export default interface INoticias {
+export enum EnumCategoria {
+    ULTIMAS = 'Ultimas',
+    DESTAQUES = 'Destaques',
+    XBOX = 'Xbox',
+    PLAYSTATION = 'Playstation',
+    NINTENDO = 'Nintendo',
+    FILMES = 'Filmes'
+}
 
-    id: number,
-    texto:string
-    imagem_capa: string;
-    titulo: string,
-    data_publicacao: string,
-    fonte: string,
-    subtitulo: string,
-    link: string,
-    categoria: string,
-    tags: string[],
-    imagem:string,
+
+
+export default interface INoticias {
+  imagem: string;
+    id:number;
+  titulo: string;
+  subtitulo: string;
+  noticia: string;
+  dataDePublicacao: Date;
+  fonte: string;
+  categoria: EnumCategoria;
+  tags: string[];
+  imagem_capa: string;
+  link: string;
 }

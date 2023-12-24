@@ -47,12 +47,16 @@ animation: ${fadeInOut} 0.1s alternate;
         top:12px;
        
 }
-@media(max-width: 1000px){
+
+@media(max-width: 1300px){
     display: none;
     .fecha{
         display: flex;
     }
+   
 }
+
+
 `
 const ButtonStyled = styled.button`
 
@@ -70,7 +74,7 @@ const ButtonStyled = styled.button`
     
 
 
-    @media(min-width: 1000px){
+    @media(min-width: 1300px){
         .abre{
           
             display: none;
@@ -78,15 +82,15 @@ const ButtonStyled = styled.button`
         
     }
 
-    @media(max-width:1000px){
+    @media(max-width:1300px){
         .abre{
             
             display: flex;
         }
        
     }
-       
     
+   
 `
 
 //()=>{menu.arrow === "flex" ? setMenu({arrow: "none",  mostraMenu: "flex"}) : setMenu({arrow: "flex",  mostraMenu: "none"})}
@@ -105,7 +109,7 @@ export default function Menu({children}){
              
              <ButtonStyled onClick={()=> {setMenuOn(false)}}><FaArrowRight color="#B6BBC4" size={32} /></ButtonStyled>
                 <MenuStyled >
-                    <button ><FaArrowLeft color="#B6BBC4" size={24} /></button>
+                    <button ><FaArrowLeft color="#B6BBC4" size={32} /></button>
                     {children}
                 </MenuStyled>
             </>
@@ -113,7 +117,6 @@ export default function Menu({children}){
     }
     return(
         <>
-           
             <ButtonStyled className="abre" style={{display: `${menu.arrow}`}} onClick={()=>{menu.arrow === "flex" ? setMenu({arrow: "none",  mostraMenu: "flex"}) : setMenu({arrow: "flex",  mostraMenu: "none"})}}><FaArrowRight color="#B6BBC4" size={32} /></ButtonStyled>
             <MenuStyled style={{display:`${menu.mostraMenu}`}}>
                 <button className="fecha" onClick={()=>{menu.arrow === "flex" ? setMenu({arrow: "none",  mostraMenu: "flex"}) : setMenu({arrow: "flex",  mostraMenu: "none"})}}><FaArrowLeft color="#B6BBC4" size={24} /></button>

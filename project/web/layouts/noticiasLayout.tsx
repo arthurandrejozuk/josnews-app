@@ -7,6 +7,7 @@ const LayoutStyle = styled.div`
         display: flex;
     }
 
+    width: 100%;
 
 `
 

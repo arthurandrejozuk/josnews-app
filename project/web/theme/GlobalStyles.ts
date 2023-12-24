@@ -40,7 +40,7 @@ html {
    
     @media(max-width: 700px ){
         body{
-            width: fit-content;
+            width: max-content;
         }
     }
 

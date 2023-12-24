@@ -8,14 +8,14 @@ interface NoticiasProps {
   noticia: INoticias;
 }
 
-async function getNoticias() {
+async function getNoticias(id:string) {
   try {
-    const response = await fetch("http://localhost:4000/noticias_jogos");
+    const response = await fetch(`http://localhost:8080/noticias/${id}`);
     if (!response.ok) {
       throw new Error("Erro ao obter dados");
     }
     const dados = await response.json();
-    return dados;
+    return [dados];
   } catch (error) {
     console.error("Erro na obtenção de dados", error);
     throw error;
@@ -42,7 +42,7 @@ const DivStyled = styled.div`
   }
   img{
     width: 1000px;
-
+    
   }
   display: flex;
   flex-direction: column;
@@ -83,7 +83,7 @@ const DivStyled = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    font-size: 20px;
     margin-left: 300px ;
     margin-bottom:120px
   }
@@ -96,10 +96,17 @@ const DivStyled = styled.div`
       margin-left: 24px;
       width: fit-content;
       margin-right: 24px;
-      font-size: 32px;
+      
     }
     picture{
       margin: 0;
+    }
+    @media(max-width: 400px){
+      .noticia__conjunto{
+      margin-left: 24px;
+      font-size: 36px;
+      margin-right: 24px;
+    }
     }
   }
 `
@@ -116,7 +123,7 @@ export default function NewPage({ noticia }: NoticiasProps) {
         <DivStyled key={noticia.id}>
             <Banner>
               <picture>
-              <source srcSet={noticia.imagem}  />
+              <source srcSet={noticia.imagem_capa}  />
               <img
                 src={noticia.imagem_capa}
                 alt="Landscape picture"
@@ -127,7 +134,7 @@ export default function NewPage({ noticia }: NoticiasProps) {
             <div className="descricao">
               <h1>{noticia.titulo}</h1>
               <p>{noticia.categoria.toUpperCase()}</p>
-              <p>{noticia.data_publicacao}</p>
+              <p>{String(noticia.dataDePublicacao).split("T", 1)}</p>
               <div className="tags">
               {noticia.tags.map((tag) => {
                   return(
@@ -141,7 +148,7 @@ export default function NewPage({ noticia }: NoticiasProps) {
               <div className="noticia">
                 <h2>{noticia.titulo}</h2>
                 <p>{noticia.subtitulo}</p>
-                <p>{noticia.texto}</p>
+                <p>{noticia.noticia}</p>
               </div>
           </div>
         </DivStyled>
@@ -153,23 +160,32 @@ export default function NewPage({ noticia }: NoticiasProps) {
 export async function getStaticProps(context: { params: { id: string } }) {
   try {
     const { id } = context.params;
-    const noticias = await getNoticias();
-    const noticia = noticias.find((item) => item.id.toString() === id);
-    if (noticia) {
-      return {
-        props: {
-          noticia,
-        },
-      };
+    console.log("Fetching data for id:", id);
+    const noticias = await getNoticias(id);
+    console.log("Found noticias:", noticias);
+    const noticia:INoticias = noticias.find((item:INoticias) => item.id.toString() === id);
+    console.log("Found noticia:", noticia);
+    if (Array.isArray(noticias)) {
+      const noticia: INoticias = noticias.find((item: INoticias) => item.id.toString() === id);
+    
+      if (noticia) {
+        return {
+          props: {
+            noticia,
+          },
+        };
+      } else {
+        return {
+          notFound: true,
+        };
+      }
     } else {
+      console.error('Unexpected data structure for noticias:', noticias);
       return {
         notFound: true,
       };
     }
-  } catch (error) {
-    console.error("Error fetching data", error);
-    return {
-      notFound: true,
-    };
+  } catch(error){
+    console.log(error)
   }
 }

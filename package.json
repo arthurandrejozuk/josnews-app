@@ -6,6 +6,9 @@
             "project/*"
         ]
     },
+    "devDependencies": {
+        "dotenv": "^16.3.1"
+    },
     "scripts": {
         "web":"yarn workspace @art/web ",
         "web:dev": "yarn workspace @art/web dev", 
