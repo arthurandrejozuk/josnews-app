@@ -6,7 +6,8 @@ module.exports = withPlugins([withTM], {
     return [
       {
         source: "/api/:path*",
-        destination: 'http://localhost:8080/noticias/:path*', // Replace with your API domain
+        destination: 'http://localhost:8080/noticias/:path*',
+        destination: 'http://localhost:8080/analises/:path*', 
       },
     ];
   },

@@ -7,13 +7,6 @@ import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { Text } from "@art/components/Text"
 import Pesquisa from "../pesquisa/Pesquisa";
 import { useState } from "react";
-import styled from "styled-components";
-
-// const HomeStyled = styled.div`
-//     width:
-
-// `
-
 
 export default function HomeMenu({onClick}){
 
@@ -25,7 +18,7 @@ export default function HomeMenu({onClick}){
     
     return(
         <>
-            <Pesquisa ativado={ativa}/>
+            <Pesquisa onClick={() => ativaPesquisa()} ativado={ativa}/>
             <Text href="/"><li><IoHomeOutline size={32} color={"#B6BBC4"} />Home</li></Text>
             <li  onClick={()=> {ativaPesquisa()}}><CiSearch size={32} color={"#B6BBC4"}/><Text>Pesquisa</Text></li>
             <Text><li onClick={onClick}><SiCodereview size={32} color={"#B6BBC4"}/>Reviews< MdOutlineKeyboardArrowRight className="arrow" size={32} color={"#B6BBC4"}/></li></Text>

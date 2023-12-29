@@ -11,7 +11,7 @@ export enum EnumCategoria {
 
 export default interface INoticias {
   imagem: string;
-    id:number;
+  id:number;
   titulo: string;
   subtitulo: string;
   noticia: string;

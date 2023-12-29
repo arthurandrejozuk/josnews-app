@@ -2,39 +2,38 @@ import styled from "styled-components"
 
 const CartaStyled = styled.div`
     
-
+    margin-bottom: 60px ;
     div{
+        display: flex;
+        top:40px;
+        position: relative;
         transform: scale(1); /* Escala inicial */
-    transition: transform 0.2s ease; /* Adiciona uma transição suave de 0.5 segundos */
+        transition: transform 0.2s ease; /* Adiciona uma transição suave de 0.5 segundos */
     }
     div:hover{
         transform: scale(1.02);
     }
 
     img{
-    width: 255px; 
-    height: auto; 
-    transform: scale(1); 
-    transition: transform 0.5s ease; 
-
+        width: 255px; 
+        height: auto; 
+        transform: scale(1); 
+        transition: transform 0.5s ease; 
     }
     img:hover{
         transform: scale(1.01); /* Ajuste o valor conforme necessário para o seu zoom */
     }
     .titulo{
-        position: relative;
+        top:160px;
+        position: absolute;
         display: flex;
         justify-content: center;
         align-items:self-start;
-        bottom:100px;
         background-color: ${props => props.theme.textColor};
         opacity: 0.9;
-        width: 100%;
-        height: 100%;
         flex-wrap: wrap;
         width: 255px;
         height: 97px;
-        max-height: 0%;
         transform: scale(1.01)
     }
     h3{

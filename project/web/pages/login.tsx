@@ -22,9 +22,12 @@ const StyledLogin = styled.section`
         align-items: center;
         a{
             font-weight: 600;
-            color: gray;
+            color: ${props => props.theme.secondary};
             text-decoration:none;
         }
+    }
+    .arrow{
+        color: ${props => props.theme.secondary};
     }
     .opcoes{
         margin-top: 200px;
@@ -81,7 +84,7 @@ export default function Login(){
     return(
         <StyledLogin>
             <div className="voltar">
-                <IoIosArrowBack  size={32} color="gray"/>
+                <IoIosArrowBack className="arrow" size={32}/>
                 <Link href="/">Voltar</Link>
             </div>
             <picture>

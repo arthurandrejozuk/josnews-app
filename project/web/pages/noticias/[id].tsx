@@ -24,9 +24,6 @@ async function getNoticias(id:string) {
 
 export async function getStaticPaths() {
   try {
-    // Não faça chamadas de API aqui, mova para getStaticProps ou getServerSideProps
-
-    // Retorna as possíveis rotas dinâmicas
     return { paths: [], fallback: false };
   } catch (error) {
     console.log("Error fetching data", error);
@@ -160,14 +157,10 @@ export default function NewPage({ noticia }: NoticiasProps) {
 export async function getStaticProps(context: { params: { id: string } }) {
   try {
     const { id } = context.params;
-    console.log("Fetching data for id:", id);
     const noticias = await getNoticias(id);
-    console.log("Found noticias:", noticias);
-    const noticia:INoticias = noticias.find((item:INoticias) => item.id.toString() === id);
-    console.log("Found noticia:", noticia);
+    //const noticia :INoticias = noticias.find((item:INoticias) => item.id.toString() === id);
     if (Array.isArray(noticias)) {
       const noticia: INoticias = noticias.find((item: INoticias) => item.id.toString() === id);
-    
       if (noticia) {
         return {
           props: {

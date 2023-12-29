@@ -3,6 +3,12 @@ import BannerDestaque from "../compositions/destaque/Banner";
 import Destaques from "../compositions/destaque/Destaques";
 import Cards from "../compositions/cards/Cards";
 import MenuLateral from "../compositions/menu/MenuLateral";
+import useDadosNoticias from "../useFunction/useDadosNoticias";
+import { useState } from "react";
+import NoticiasEncotradas from "../compositions/NoticiasEncontrada/NoticiasEncotradas";
+import styled from "styled-components";
+
+
 
 
 export default function Home(){
@@ -12,10 +18,11 @@ export default function Home(){
         subtitulo: "O Hype é real",
         imagem: "https://c4.wallpaperflare.com/wallpaper/878/70/356/gta-vi-grand-theft-auto-6-grand-theft-auto-pc-gaming-video-game-art-hd-wallpaper-preview.jpg",
     }
-    
+   
+        
     return(
         <>
-            <MenuLateral/>
+            <MenuLateral />
             <Destaques>
                 <BannerDestaque destaque={destaque}/>
             </Destaques>

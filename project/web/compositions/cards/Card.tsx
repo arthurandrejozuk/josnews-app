@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import styled from "styled-components"
-import Image from "next/image"
 
 const LinkStyled = styled.a`
     
@@ -15,14 +14,14 @@ const CardStyled = styled.div`
     background-color: ${props => props.theme.background};
     font-size: 20px;
     align-items: start;
+    justify-content: start;
     width: 700px;
     margin-bottom: 8px;
     padding-bottom: 12px;
     border-bottom: 1px solid #9aaaf5;
-
     h1{
         font-size: 32px;
-        color: ${props => props.theme.textColor}
+        color: ${props => props.theme.textColor};
     }
     .date{
         font-size: 16px;
@@ -44,7 +43,8 @@ const CardStyled = styled.div`
         border-radius: 8px;
     }
     p{
-        color: ${props => props.theme.secondary}
+        color: ${props => props.theme.secondary};
+        font-weight: 600;
     }
     .descricao{
         padding: 0px 8px 8px

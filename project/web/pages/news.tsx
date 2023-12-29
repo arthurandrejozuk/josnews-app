@@ -4,11 +4,9 @@ import NoticiasLayout from "../layouts/noticiasLayout"
 
 export default function News(){
     return(
-        
-            <NoticiasLayout >
-                <Cartas/>
-                <Cards/>
-            </NoticiasLayout>
-       
+        <NoticiasLayout >
+            <Cartas/>
+            <Cards/>
+        </NoticiasLayout>
     )
 }

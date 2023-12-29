@@ -31,14 +31,9 @@ const CardsStyled = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    
-    h1{
-       color: ${props => props.theme.secondary};
-        margin-bottom: 24px;
-    }
    `
 
-export default function Cards(){
+export default function Cards({}){
 
     const opcoes:{ categoria: string; key: number; selecionado: boolean }[] = [
         {
@@ -95,12 +90,12 @@ export default function Cards(){
         }
         
         (filteredNews || news) && (filteredNews || news).map(noticia => {
-      console.log(noticia)
+
     })
     useEffect(() => {
       // Log news whenever either filteredNews or news changes
       (filteredNews || news)?.forEach((noticia) => {
-        console.log(noticia);
+
       });
     }, [filteredNews, news]);
 

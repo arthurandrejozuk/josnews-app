@@ -3,21 +3,24 @@ import Carta from "./Carta";
 
 const CartasStyled = styled.div`
     
-    width: 100%;
+    margin-left: 400px;
     display: flex;
     margin-top: 40px;
-    margin-left: 200px;
+    align-items: center;
     justify-content: center;
     .cartas{
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 80px;
+        gap: 60px;
         /* overflow-x: scroll;
         overflow-y: hidden; */
     }
-    @media(max-width: 1200px){
-        margin-left: 0px;
+    @media(max-width: 1000px){
+       margin-left: 0;
+       .cartas{
+        gap:12px;
+       }
     }
 `
 

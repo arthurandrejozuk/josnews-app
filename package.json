@@ -15,6 +15,5 @@
         "components": "yarn workspace @art/components",
         "databanks":"yarn workspace @art/databanks",
         "databanks:server": "yarn databanks json-server --watch noticias.json --port 4000"
-        
     }
 }
