@@ -45,9 +45,10 @@ const Opcoes = styled.div`
 const EscolhaStyled = styled.h1`
     color: ${props => props.theme.secondary};
     margin-right: 300px;
+    margin-bottom: 12px;
     @media(max-width:1000px){
        align-self: flex-start;
-       margin-left: 20px;
+       margin-left: 5%;
        
     }
 `

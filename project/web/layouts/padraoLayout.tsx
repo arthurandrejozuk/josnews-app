@@ -11,7 +11,7 @@ const LayoutStyle = styled.div`
 
 `
 
- export default function NoticiasLayout({children}){
+ export default function Layout({children}){
     return(
         <>
             <MenuLateral/>

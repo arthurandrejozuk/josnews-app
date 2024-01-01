@@ -1,6 +1,6 @@
 
 import styled from "styled-components";
-import NoticiasLayout from "../../layouts/noticiasLayout";
+import NoticiasLayout from "../../layouts/padraoLayout";
 import INoticias from "../../types/INoticias";
 import Banner from "@art/components/Banner";
 

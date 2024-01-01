@@ -3,7 +3,7 @@ import { CiSearch } from "react-icons/ci";
 import { IoCloseCircle } from "react-icons/io5";
 import NoticiasEncotradas from "../NoticiasEncontrada/NoticiasEncotradas";
 import { useState } from "react";
-import useDadosNoticias from "../../useFunction/useDadosNoticias";
+import useDadosNoticias from "../../useFunction/noticias/useDadosNoticias";
 
 const fadeInOut = keyframes`
   from {

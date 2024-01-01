@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Card from "./Card";
-import useNoticias from "../../useFunction/useDadosNoticias";
+import useNoticias from "../../useFunction/noticias/useDadosNoticias";
 import OpcoesNews from "../categoria/OpcoesNews";
 import { useEffect, useState } from "react";
 import INoticias, { EnumCategoria } from "../../types/INoticias";

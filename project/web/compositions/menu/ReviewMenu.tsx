@@ -16,9 +16,9 @@ export default function ReviewMenu({onClick}){
             <VoltaStyled>
                 <a onClick={onClick}><BiLeftArrowAlt size={24} color={"#B6BBC4"}/></a>
             </VoltaStyled>
-            <li><Text>Análises</Text></li>
-            <li><Text>Rankings</Text></li>
-            <li> <Text>Sobre o Jogo</Text></li>
+            <Text href="/analises"><li>Análises</li></Text>
+            <Text href="#rank"><li>Rankings</li></Text>
+            <Text href="#sobre"><li> Sobre o Jogo</li></Text>
         </Descricao>
     )
     }

@@ -3,10 +3,10 @@ import BannerDestaque from "../compositions/destaque/Banner";
 import Destaques from "../compositions/destaque/Destaques";
 import Cards from "../compositions/cards/Cards";
 import MenuLateral from "../compositions/menu/MenuLateral";
-import useDadosNoticias from "../useFunction/useDadosNoticias";
-import { useState } from "react";
-import NoticiasEncotradas from "../compositions/NoticiasEncontrada/NoticiasEncotradas";
-import styled from "styled-components";
+import Ranks from "../compositions/ranks/ranks";
+import { useEffect, useState } from "react";
+import IAnalises from "../types/IAnalises";
+
 
 
 
@@ -19,7 +19,8 @@ export default function Home(){
         imagem: "https://c4.wallpaperflare.com/wallpaper/878/70/356/gta-vi-grand-theft-auto-6-grand-theft-auto-pc-gaming-video-game-art-hd-wallpaper-preview.jpg",
     }
    
-        
+    
+
     return(
         <>
             <MenuLateral />
