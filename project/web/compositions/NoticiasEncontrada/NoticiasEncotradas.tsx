@@ -31,6 +31,7 @@ const DivStyled = styled.div`
         height: 200px;
         h4{
             padding-left: 24px;
+            padding-right: 12px;
         }
     }
 
