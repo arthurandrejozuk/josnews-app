@@ -1,12 +1,10 @@
-
 import { MdOutlineWbSunny } from "react-icons/md";
 import { LuMoon } from "react-icons/lu";
 import styled from "styled-components";
 
 const ButtonStyled = styled.button`
-  
   display: flex;
-  align-items:center;
+  align-items: center;
   justify-content: center;
   border-radius: 100%;
   width: 12px;
@@ -18,36 +16,24 @@ const ButtonStyled = styled.button`
   bottom: 10%;
   right: 10%;
   background: transparent;
-  color: ${props => props.theme.secondary};
+  color: ${(props) => props.theme.secondary};
   border: none;
   cursor: pointer;
-    @media(max-width:1000px){
-        botao{
-            size: 40px;
-        }
+  @media (max-width: 1000px) {
+    botao {
+      size: 40px;
     }
-`
+  }
+`;
 interface ButtonProps {
-    onClick: () => void,
-    modo: boolean
+  onClick: () => void;
+  modo: boolean;
 }
 
-export default function ButtonModo({onClick, modo}:ButtonProps){
-
-
-    if(modo){
-        return(
-            <ButtonStyled onClick={onClick}>
-               <MdOutlineWbSunny className="botao" size={46}/>
-            </ButtonStyled>
-        )
-    } 
-        return(
-            <ButtonStyled onClick={onClick}>
-                <LuMoon className="botao" size={46}/>
-            </ButtonStyled>
-        )
-    
-       
-       
+export default function ButtonModo({ onClick, modo }: ButtonProps) {
+  return (
+    <ButtonStyled onClick={onClick}>
+      {modo ? <MdOutlineWbSunny size={40} /> : <LuMoon size={40} />}
+    </ButtonStyled>
+  );
 }
