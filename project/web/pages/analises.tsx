@@ -8,8 +8,8 @@ import Ranks from "../compositions/ranks/ranks";
 const CardsStyled = styled.div`
   display: flex;
   flex-direction: column;
-  width: 750px;
-  margin-left: 400px;
+  width: 500px;
+  margin-left: 360px;
   margin-bottom: 32px;
   margin-top: 40px;
   @media(max-width: 1200px){

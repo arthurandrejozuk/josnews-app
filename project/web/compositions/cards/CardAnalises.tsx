@@ -14,7 +14,7 @@ const CardStyled = styled.div`
     font-size: 20px;
     align-items: start;
     justify-content: start;
-    width: 900px;
+    width: 800px;
     margin-bottom: 8px;
     padding-bottom: 12px;
     border-bottom: 1px solid #9aaaf5;

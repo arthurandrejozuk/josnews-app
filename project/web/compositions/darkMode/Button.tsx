@@ -37,3 +37,4 @@ export default function ButtonModo({ onClick, modo }: ButtonProps) {
     </ButtonStyled>
   );
 }
+

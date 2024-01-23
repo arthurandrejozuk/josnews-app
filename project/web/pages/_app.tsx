@@ -6,7 +6,7 @@ import GlobalStyled from "../theme/GlobalStyles";
 import ButtonModo from "../compositions/darkMode/Button";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
-  const [tema, setTema] = useState(brigthTheme);
+  const [tema, setTema] = useState(darkTheme);
   const [modo, setModo] = useState(true);
   const [load, setLoad] = useState(true);
 

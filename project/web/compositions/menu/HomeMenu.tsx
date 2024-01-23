@@ -23,7 +23,7 @@ export default function HomeMenu({onClick}){
             <li  onClick={()=> {ativaPesquisa()}}><CiSearch size={32} color={"#B6BBC4"}/><Text>Pesquisa</Text></li>
             <Text><li onClick={onClick}><SiCodereview size={32} color={"#B6BBC4"}/>Reviews< MdOutlineKeyboardArrowRight className="arrow" size={32} color={"#B6BBC4"}/></li></Text>
             <Text href="/news"><li><IoNewspaperOutline size={32} color={"#B6BBC4"}/>News</li></Text>
-            <li><CiVideoOn  size={32} color={"#B6BBC4"}/><Text>Videos</Text></li>
+            <Text href="/videos"><li><CiVideoOn  size={32} color={"#B6BBC4"}/>Videos</li></Text>
         </>
     )
 }

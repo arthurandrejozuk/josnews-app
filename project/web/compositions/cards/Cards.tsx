@@ -106,14 +106,13 @@ export default function Cards({}){
         {(filteredNews || news) &&
             (filteredNews || news).map((noticia) => (
           <Card
-            key={noticia.id}
-            titulo={noticia.titulo}
-            tags={noticia.dataDePublicacao}
-            categoria={noticia.categoria}
-            capa={noticia.imagem_capa}
-            link={noticia.link}
-            subtitulo={noticia.subtitulo}
-          />
+                key={noticia.id}
+                titulo={noticia.titulo}
+                tags={String(noticia.dataDePublicacao)}
+                categoria={noticia.categoria}
+                capa={noticia.imagem_capa}
+                link={noticia.link}
+                subtitulo={noticia.subtitulo} minutagemOuPublicacao={"Data:"}          />
         ))}
       {!filteredNews && !news && <h1>Nada a vista</h1>}
             </CardsStyled>
