@@ -18,6 +18,7 @@ const CartasStyled = styled.div`
     }
     @media(max-width: 1000px){
        margin-left: 0;
+       margin: 12px;
        .cartas{
         gap:12px;
        }

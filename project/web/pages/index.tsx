@@ -3,13 +3,6 @@ import BannerDestaque from "../compositions/destaque/Banner";
 import Destaques from "../compositions/destaque/Destaques";
 import Cards from "../compositions/cards/Cards";
 import MenuLateral from "../compositions/menu/MenuLateral";
-import Ranks from "../compositions/ranks/ranks";
-import { useEffect, useState } from "react";
-import IAnalises from "../types/IAnalises";
-
-
-
-
 
 export default function Home(){
 
@@ -25,7 +18,7 @@ export default function Home(){
         <>
             <MenuLateral />
             <Destaques>
-                <BannerDestaque destaque={destaque}/>
+                <BannerDestaque linkBanner={"/noticias/5"} destaque={destaque}/>
             </Destaques>
             <Cards/>
         </>

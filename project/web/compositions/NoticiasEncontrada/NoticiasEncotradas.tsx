@@ -37,7 +37,7 @@ const DivStyled = styled.div`
 
     a{
         text-decoration: underline;
-        text-underline-offset: 2px;
+        text-underline-offset: 6px;
         font-size: 24px;
         color:${props => props.theme.secondary};
     }
