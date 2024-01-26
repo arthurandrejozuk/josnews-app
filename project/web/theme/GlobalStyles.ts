@@ -56,8 +56,8 @@ html {
   width: 10px;
 }
 *::-webkit-scrollbar-track {
-  border-radius: 5px;
-  background-color: #000000;
+  border-radius: 2px;
+  background-color:  ${props => props.theme.backgroundSecondary}
 }
 
 *::-webkit-scrollbar-track:hover {
@@ -65,11 +65,11 @@ html {
 }
 
 *::-webkit-scrollbar-track:active {
-  background-color: #000000;
+  background-color:  ${props => props.theme.backgroundSecondary}
 }
 
 *::-webkit-scrollbar-thumb {
-  border-radius: 5px;
+  border-radius: 2px;
   background-color: #B6BBC4;
 }
 

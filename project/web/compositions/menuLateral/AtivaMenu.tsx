@@ -2,7 +2,7 @@ import styled, { keyframes } from "styled-components";
 import { FaArrowRight } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
 import { useState } from "react";
-import Pesquisa from "../pesquisa/Pesquisa";
+
 
 
 const fadeInOut = keyframes`
@@ -21,7 +21,7 @@ const MenuStyled = styled.div`
 z-index: 2;
 position: fixed;
 flex-direction: column;
-background-image: linear-gradient(to right,#181818, #313131) ;
+background-image: linear-gradient(to right, ${props => props.theme.background}, ${props => props.theme.backgroundSecondary}) ;
 width: 350px;
 height: 100vh;
 display: flex;

@@ -11,7 +11,7 @@ const LoginStyles = styled.div`
     border-top: 2px solid black;
     width: 100%;
     justify-content: space-around;
-    background-image: linear-gradient(to right,#181818, #313131) ;
+    background-image: linear-gradient(to right, ${props => props.theme.background}, ${props => props.theme.backgroundSecondary}) ;
     .cadastro{
         background-image: linear-gradient(to right,#c5c5c5, #e7e7e7) ;
         color: #313131;
@@ -28,7 +28,7 @@ const LoginStyles = styled.div`
    
 `
 const ButtonLogin = styled(Button)`
-
+background-image: linear-gradient(to right, ${props => props.theme.background}, ${props => props.theme.backgroundSecondary}) ;
 `
 
 export default function Login(){

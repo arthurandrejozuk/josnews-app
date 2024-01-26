@@ -2,7 +2,7 @@
 import BannerDestaque from "../compositions/destaque/Banner";
 import Destaques from "../compositions/destaque/Destaques";
 import Cards from "../compositions/cards/Cards";
-import MenuLateral from "../compositions/menu/MenuLateral";
+import MenuLateral from "../compositions/menuLateral/Principal";
 
 export default function Home(){
 

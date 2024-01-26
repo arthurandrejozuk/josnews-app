@@ -17,7 +17,10 @@ const Opcoes = styled.div`
     justify-content:start;
     width: 700px;
     padding: 12px;
-    border-radius: 12px;
+    border-radius: 4px;
+    
+    padding: 8px;
+
     button{
         margin-bottom: 12px;
         padding: 10px;
@@ -49,7 +52,6 @@ const EscolhaStyled = styled.h1`
     @media(max-width:1000px){
        align-self: flex-start;
        margin-left: 5%;
-       
     }
 `
 

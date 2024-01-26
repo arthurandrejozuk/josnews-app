@@ -1,5 +1,5 @@
-import CadastroOpcoes from "../compositions/LoginCadastro/CadastroOpcao";
-import LoginCadastro from "../compositions/LoginCadastro/Login";
+import CadastroOpcoes from "../compositions/loginCadastro/CadastroOpcao";
+import LoginCadastro from "../compositions/loginCadastro/Login";
 import styled from "styled-components";
 import { IoIosArrowBack } from "react-icons/io";
 import Link from "next/link";

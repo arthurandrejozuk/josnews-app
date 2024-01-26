@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import MenuLateral from "../compositions/menu/MenuLateral";
+import MenuLateral from "../compositions/menuLateral/Principal";
 
 const LayoutStyle = styled.div`
     

@@ -1,13 +1,19 @@
 import Logo from "@art/components/Logo";
 import { Text } from "@art/components/Text";
-import LoginMenu from "../../compositions/login/LoginMenu";
-import Menu from "../../compositions/menu/Menu";
+import LoginMenu from "../login/LoginMenu";
+import Menu from "./AtivaMenu";
 import { CgGames } from "react-icons/cg";
-import DescricaoMenu from "../../compositions/descricao/DescricaoMenu";
+import DescricaoMenu from "../descricao/DescricaoMenu";
 import styled from "styled-components";
 
 const DivStyled = styled.div`
   width: 10px;
+  a{
+    color: ${props => props.theme.secondary};
+  }
+  .icon{
+    color: ${props => props.theme.secondary};
+  }
 `;
 
 const MenuLateral = () => {
@@ -15,7 +21,7 @@ const MenuLateral = () => {
     <DivStyled className="menu__lateral">
       <Menu>
         <Logo>
-          <CgGames color={"#B6BBC4"} size={60} />
+          <CgGames className="icon" size={60} />
           <Text>Josnews</Text>
         </Logo>
         <DescricaoMenu />

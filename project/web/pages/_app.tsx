@@ -3,7 +3,7 @@ import { ThemeProvider } from "styled-components";
 import { darkTheme, brigthTheme } from "../theme/theme";
 import { useEffect, useState } from "react";
 import GlobalStyled from "../theme/GlobalStyles";
-import ButtonModo from "../compositions/darkMode/Button";
+import ButtonModo from "../compositions/mudaTema/Button";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   const [tema, setTema] = useState(darkTheme);

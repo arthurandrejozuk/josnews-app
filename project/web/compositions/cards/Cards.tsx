@@ -16,6 +16,9 @@ const CardsStyled = styled.div`
     gap: 12px;
     width: 100%;
     margin-bottom: 50px;
+    h1{
+      color: ${props => props.theme.secondary};
+    }
     @media(max-width:1000px){
       margin-left:0px;
       justify-content: center;

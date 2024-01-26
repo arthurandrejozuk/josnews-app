@@ -2,8 +2,8 @@
 import styled, { keyframes } from "styled-components"
 import { useState } from "react";
 import Descricao from "./Descricao";
-import ReviewMenu from "../menu/ReviewMenu";
-import HomeMenu from "../menu/HomeMenu";
+import ReviewMenu from "../menuLateral/ReviewMenu";
+import HomeMenu from "../menuLateral/HomeMenu";
 
 const fadeInOut = keyframes`
   from {
@@ -57,7 +57,7 @@ const DescStyled = styled.div`
            margin-left: 60px;
     }
     li:hover{
-        background-color: #3b3b3b;
+        background-color: ${props => props.theme.backgroundSecondary};
         
     }
 
