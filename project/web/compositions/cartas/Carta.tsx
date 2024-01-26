@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import Text from "@art/components/Text"
 
 const CartaStyled = styled.div`
     
@@ -58,7 +59,7 @@ export default function Carta(){
                     <source width={100} srcSet="https://image.api.playstation.com/vulcan/ap/rnd/202311/0220/b2f6d383b0d49f69646e6f4231bfcb4d5255083b228d18b1.png" />
                     <img width={100} src="https://image.api.playstation.com/vulcan/ap/rnd/202311/0220/b2f6d383b0d49f69646e6f4231bfcb4d5255083b228d18b1.png" alt="" />
                    <div className="titulo">
-                        <h3>Fortnite acaba de lançar modo </h3>
+                        <Text tag="h3">Fortnite acaba de lançar modo </Text>
                    </div>
                 </picture>
             </div>

@@ -14,7 +14,7 @@ const LoginStyles = styled.div`
     background-image: linear-gradient(to right, ${props => props.theme.background}, ${props => props.theme.backgroundSecondary}) ;
     .cadastro{
         background-image: linear-gradient(to right,#c5c5c5, #e7e7e7) ;
-        color: #313131;
+        color: ${props => props.theme.text};
     }
     .login:hover{
         opacity: 0.8;
@@ -28,6 +28,8 @@ const LoginStyles = styled.div`
    
 `
 const ButtonLogin = styled(Button)`
+border: 2px solid ${props => props.theme.text};
+color: ${props => props.theme.text};
 background-image: linear-gradient(to right, ${props => props.theme.background}, ${props => props.theme.backgroundSecondary}) ;
 `
 

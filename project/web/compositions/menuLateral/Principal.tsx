@@ -1,5 +1,5 @@
 import Logo from "@art/components/Logo";
-import { Text } from "@art/components/Text";
+import  Text  from "@art/components/Text"
 import LoginMenu from "../login/LoginMenu";
 import Menu from "./AtivaMenu";
 import { CgGames } from "react-icons/cg";

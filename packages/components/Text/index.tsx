@@ -1,9 +1,32 @@
+import React from "react";
+import { InterfaceText } from "../../interface/InterfaceText";
 import styled from "styled-components";
 
-
-export const Text = styled.a`
-    
+const TextStyled = styled.p<InterfaceText>`
+  color: ${(props) => props.theme.secondary};
+  h1{
+    font-size: 32px;
+  }
+  p{
+    font-size: 24px;
+  }
+  a{
     text-decoration: none;
-    color: #d9d9da;
-    
-` 
+  }
+`;
+
+export default function Text({
+  children,
+  href,
+  className,
+  onClick,
+  active,
+  tag,
+  ...props
+}: InterfaceText) {
+  return(<TextStyled as={tag} href={href} className={className} onClick={onClick} >{children}</TextStyled>);
+}
+
+Text.defaultProps = {
+  href: "/"
+}

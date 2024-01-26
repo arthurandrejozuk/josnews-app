@@ -1,5 +1,5 @@
 import Banner from "@art/components/Banner";
-import { Text } from "@art/components/Text";
+import Text from "@art/components/Text";
 import Link from "next/link";
 import styled from "styled-components";
 
@@ -11,11 +11,21 @@ const BannerImage = styled.img`
   background-repeat: no-repeat;
   height: auto;
   border-radius: 12px;
-
+  
   @media (max-width: 1000px) {
     margin-left: 0px;
     width: 100%;
   }
+`;
+
+const TituloBanner = styled(Text)`
+  font-size: 24px;
+  color: ${(props) => props.theme.textDefault};
+  text-shadow:  1px 1px 1px  ${(props) => props.theme.text};
+`;
+const SubtituloBanner = styled(Text)`
+  color: ${(props) => props.theme.text};
+  font-size: 32px;
 `;
 
 export default function BannerDestaque({ destaque, linkBanner }) {
@@ -26,8 +36,8 @@ export default function BannerDestaque({ destaque, linkBanner }) {
       <Banner>
         <BannerImage src={imagem} />
         <div>
-          <Text>{titulo}</Text>
-          <p>{subtitulo}</p>
+          <TituloBanner tag="h2">{titulo}</TituloBanner>
+          <SubtituloBanner tag="p">{subtitulo}</SubtituloBanner>
         </div>
       </Banner>
     </Link>

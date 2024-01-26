@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Text from '@art/components/Text';
 
 const StyledRank = styled.a`
     cursor: pointer;
@@ -35,8 +36,8 @@ export default function Rank({image, jogo, rank, link}){
         <StyledRank href={link}>
             <img src={image} alt="image" />
             <div>
-                <h1>{jogo}</h1>
-                <p>Nota: {rank}</p>
+                <Text tag='h1'>{jogo}</Text>
+                <Text>Nota: {rank}</Text>
             </div>
         </StyledRank>
     )

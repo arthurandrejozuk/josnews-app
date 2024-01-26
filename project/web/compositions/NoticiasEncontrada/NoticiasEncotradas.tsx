@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { IoCloseCircle } from "react-icons/io5";
 import { useState } from "react";
+import Text from "@art/components/Text";
 
 const DivStyled = styled.div`
     display: flex;
@@ -59,7 +60,7 @@ export default function NoticiasEncotradas({titulo, img, link}:{titulo:string, i
                 <div className="encontrado">
                     <IoCloseCircle size={36} className="fecha__icon" onClick={() => {setDesativa("none")}}/>
                     <img src={img} alt="imagem da pesquisa" />
-                    <a href={link}><h4>{titulo}</h4></a>
+                    <Text tag="a" href={link}><Text tag="h3">{titulo}</Text></Text>
                 </div>
         </DivStyled>
     )

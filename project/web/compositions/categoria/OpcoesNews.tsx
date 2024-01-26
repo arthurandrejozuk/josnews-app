@@ -1,8 +1,13 @@
 import { useState } from "react";
 import styled from "styled-components";
+import Text from "@art/components/Text";
 
 const Opcoes = styled.div`
-    
+    a{
+        text-decoration:none;
+        color: ${(props) => props.theme.textDefault};
+    }
+      
     margin-left: 400px; 
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
@@ -78,7 +83,7 @@ export default function OpcoesNews({opcoes, onClick}){
                     return(
                         <div key={opcao.key}>
                             <button onClick={() => escolha(opcao.categoria)}>
-                                <a>{opcao.categoria}</a>
+                                <Text tag="a">{opcao.categoria}</Text>
                             </button>
                         </div>
                     )

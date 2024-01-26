@@ -1,3 +1,4 @@
+import Text from "@art/components/Text";
 import styled from "styled-components";
 
 const LinkStyled = styled.a`
@@ -17,7 +18,7 @@ const CardStyled = styled.div`
   border-bottom: 1px solid #9aaaf5;
   h1 {
     font-size: 32px;
-    color: ${(props) => props.theme.textColor};
+    color: ${(props) => props.theme.text};
   }
   .date {
     font-size: 16px;
@@ -58,6 +59,10 @@ const CardStyled = styled.div`
   }
 `;
 
+const TituloCard = styled(Text)`
+  color: ${(props) => props.theme.text};
+`
+
 export default function Card({
   titulo,
   categoria,
@@ -81,15 +86,14 @@ export default function Card({
         <picture>
           <source srcSet={capa} />
           <img src="https://example.com/hero.jpg" alt="Landscape picture" />
-          <p className="date">
+          <Text tag="p" className="date">
             {minutagemOuPublicacao} {tags?.split("T", 1)}
-          </p>
+          </Text>
         </picture>
         <div className="descricao">
-          <h1>{titulo}</h1>
-        
-          <p>{subtitulo}</p>
-          <p>{categoria}</p>
+          <TituloCard tag="h1">{titulo}</TituloCard>
+          <Text>{subtitulo}</Text>
+          <Text>{categoria}</Text>
         </div>
       </CardStyled>
     </LinkStyled>

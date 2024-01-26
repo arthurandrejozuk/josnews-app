@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import Text from "@art/components/Text"
 
 const LinkStyled = styled.a`
     
@@ -74,9 +75,9 @@ export default function CardAnalises({link, jogo, sobre, image}){
                   <img src={image} alt="" />
             </div>
                 <div className="descricao">
-                    <h1>{jogo}</h1>
-                    <p className="sobre">Sobre: {sobre}</p>
-                    <p>Veja Mais...</p>
+                    <Text tag="h1">{jogo}</Text>
+                    <Text className="sobre">Sobre: {sobre}</Text>
+                    <Text>Veja Mais...</Text>
                 </div>
         </CardStyled >
     </LinkStyled >

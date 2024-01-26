@@ -16,7 +16,7 @@ const ButtonStyled = styled.button`
   bottom: 10%;
   right: 10%;
   background: transparent;
-  color: ${(props) => props.theme.textColor};
+  color: ${(props) => props.theme.text};
   border: none;
   cursor: pointer;
   @media (max-width: 1000px) {
