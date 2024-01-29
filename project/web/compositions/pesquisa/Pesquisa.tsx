@@ -1,7 +1,7 @@
 import styled, { keyframes } from "styled-components";
 import { CiSearch } from "react-icons/ci";
 import { IoCloseCircle } from "react-icons/io5";
-import NoticiasEncotradas from "../noticiasEncontrada/NoticiasEncotradas";
+import NoticiasEncotradas from "../noticiasEncontradas/NoticiasEncotradas";
 import { useState } from "react";
 import useDadosNoticias from "../../useFunction/noticias/useDadosNoticias";
 
