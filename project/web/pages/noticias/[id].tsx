@@ -31,6 +31,9 @@ export async function getStaticPaths() {
 }
 
 const DivStyled = styled.div`
+margin: 24px;
+margin-left: 10%;
+margin-right: 10%;
   picture {
     border-radius: 12px;
     margin-left: 150px;
@@ -125,7 +128,7 @@ export default function NewPage({ noticia }: NoticiasProps) {
                 {noticia.tags.map((tag) => {
                   return (
                     <>
-                      <span>{tag[0].toUpperCase() + tag.substring(1)}</span>
+                      <span key={tag}>{tag[0].toUpperCase() + tag.substring(1)}</span>
                     </>
                   );
                 })}

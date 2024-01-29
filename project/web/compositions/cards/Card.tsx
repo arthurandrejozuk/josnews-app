@@ -91,8 +91,8 @@ export default function Card({
           </Text>
         </picture>
         <div className="descricao">
-          <TituloCard tag="h1">{titulo}</TituloCard>
-          <Text>{subtitulo}</Text>
+          <TituloCard tag="h2">{titulo}</TituloCard>
+          <Text tag="p">{subtitulo}</Text>
           <Text>{categoria}</Text>
         </div>
       </CardStyled>

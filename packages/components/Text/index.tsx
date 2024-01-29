@@ -3,7 +3,7 @@ import { InterfaceText } from "../../interface/InterfaceText";
 import styled from "styled-components";
 
 const TextStyled = styled.p<InterfaceText>`
-  color: ${(props) => props.theme.secondary};
+
   h1{
     font-size: 32px;
   }
