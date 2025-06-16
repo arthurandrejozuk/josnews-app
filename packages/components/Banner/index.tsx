@@ -65,9 +65,9 @@ const BannerContainer = styled.div`
     }
 `
 
-export default function Banner({children}){
+export default function Banner({children, ...rest}:React.HTMLAttributes<HTMLDivElement>){
     return(
-        <BannerContainer>
+        <BannerContainer {...rest}>
             {children}
         </BannerContainer>
     )

@@ -16,10 +16,10 @@ export const ButtonS = styled.button`
 `
 
 
-export default function Button({onclick, children, className}){
+export default function Button({onClick, children, className}:React.ButtonHTMLAttributes<HTMLButtonElement>){
     
     return(
-        <ButtonS className={className} onClick={(onclick)}>
+        <ButtonS className={className} onClick={onClick}>
             {children}
         </ButtonS>
     )

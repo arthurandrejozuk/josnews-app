@@ -22,9 +22,9 @@ export default function Text({
   onClick,
   active,
   tag,
-  ...props
+  ...rest
 }: InterfaceText) {
-  return(<TextStyled as={tag} href={href} className={className} onClick={onClick} >{children}</TextStyled>);
+  return(<TextStyled {...rest} as={tag} href={href} className={className} onClick={onClick} >{children}</TextStyled>);
 }
 
 Text.defaultProps = {

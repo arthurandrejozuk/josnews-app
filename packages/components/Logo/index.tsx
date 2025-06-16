@@ -15,9 +15,9 @@ const LogoStyled = styled.span`
     
 `
 
-export default function Logo({children}){
+export default function Logo({children, ...rest}:React.HTMLAttributes<HTMLSpanElement>){
     return(
-        <LogoStyled>
+        <LogoStyled {...rest}>
             {children}
         </LogoStyled>
     )
