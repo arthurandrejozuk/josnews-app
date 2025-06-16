@@ -39,12 +39,12 @@ export default function Login(){
     
     return(
         <LoginStyles >
-            <ButtonLogin className={"login"}  onclick={() => {
+            <ButtonLogin className={"login"}  onClick={() => {
                 router.push("/login");
             }}>
                 LOGIN
             </ButtonLogin >
-            <ButtonLogin className={"cadastro"}  onclick={() => {
+            <ButtonLogin className={"cadastro"}  onClick={() => {
                 router.push("/cadastro");
             }}>
                 CADASTRAR
