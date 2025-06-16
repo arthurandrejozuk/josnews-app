@@ -59,8 +59,7 @@ export default function HomeMenu({ onClick }) {
         <CiSearch size={32} className="icon" />
        <Text tag="p">Pesquisa</Text>
       </li>
-      </Text>
-      <Text tag="a">
+      </Text>    
         <li onClick={onClick}>
           <SiCodereview size={32}  className="icon"/>
           <Text tag="p">Reviews</Text> 
@@ -68,12 +67,11 @@ export default function HomeMenu({ onClick }) {
             className="arrow"
             size={32}
           />
-        </li>
-      </Text>
+        </li>  
       <Text tag="a" href="/news">
         <li>
           <IoNewspaperOutline className="icon" size={32} />
-          <Text tag="a">News</Text>
+          <Text href="/news" tag="a">News</Text>
         </li>
       </Text>
       <Text tag="a" href="/videos">

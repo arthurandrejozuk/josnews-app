@@ -30,7 +30,7 @@ const CartaStyled = styled.div`
         display: flex;
         justify-content: center;
         align-items:self-start;
-        background-color: ${props => props.theme.textColor};
+        background-color: ${props => props.theme.backgroundSecondary};
         opacity: 0.9;
         flex-wrap: wrap;
         width: 255px;
@@ -40,7 +40,7 @@ const CartaStyled = styled.div`
     h3{
         margin-top: 12px;
         margin-left: 10px;
-        color: ${props => props.theme.background};
+        color: ${props => props.theme.textDefault};
         
     }
     h3:hover{

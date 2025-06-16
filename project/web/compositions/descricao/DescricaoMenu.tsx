@@ -74,7 +74,12 @@ export default function DescricaoMenu(){
 
     return(
         <DescStyled>
-           <Descricao >{review ? <ReviewMenu onClick={() => { review ? setReview(false) : setReview(true)}}/> : <HomeMenu onClick={() => { review ? setReview(false) : setReview(true)}}/>}</Descricao>
+           <Descricao >
+            {review ? 
+            <ReviewMenu onClick={() => { review ? setReview(false) : setReview(true)}}/> 
+            : <HomeMenu onClick={() => { review ? setReview(false) : setReview(true)}}/>
+            }
+            </Descricao>
         </DescStyled>
     )
 }

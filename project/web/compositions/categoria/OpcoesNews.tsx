@@ -83,7 +83,7 @@ export default function OpcoesNews({opcoes, onClick}){
                     return(
                         <div key={opcao.key}>
                             <button onClick={() => escolha(opcao.categoria)}>
-                                <Text tag="a">{opcao.categoria}</Text>
+                                <Text tag="p">{opcao.categoria}</Text>
                             </button>
                         </div>
                     )
